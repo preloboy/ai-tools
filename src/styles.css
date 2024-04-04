@@ -1,12 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+:root,
+[theme=light] {
+    --primary-color: #007bff;
+    /* Define a variable */
+    --secondary-color: #6c757d;
+    color: aliceblue;
+}
+
+[theme=dark] {
+    --primary-color: #02172e;
+    /* Define a variable */
+    --secondary-color: #6c757d;
+    color: aliceblue;
+}
 
 * {
     box-sizing: border-box;
 }
+
 body {
     /* background-color: #151515; */
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
-  
