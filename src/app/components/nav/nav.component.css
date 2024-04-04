@@ -11,6 +11,18 @@
     justify-content: center;
     gap: 2rem;
 }
-/* .navbar ul li{
-
-} */
+.navbar ul li{
+    cursor: pointer;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    gap:1em;
+    cursor: pointer;
+}
+.logo{
+    width: 2rem;
+    height: 2rem;
+    background-color: aquamarine;
+    border-radius: 50%;
+}
