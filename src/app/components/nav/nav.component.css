@@ -1,5 +1,7 @@
 .navbar{
-    z-index: 100;
+    color: aliceblue;
+    padding: 0 1.5rem;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
