@@ -1,9 +1,10 @@
-<svg id="shape" data-name="shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 557.03">
+<div [attr.theme]="isDark ? 'dark' : 'light'">
+  <svg id="shape" data-name="shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 557.03">
   <g id="shape" data-name="Layer 1">
     <path class="cls-1" d="M1366,0H0v549.5c241.98,16.2,420.48,6.71,538.5-33,192.69-64.84,294.42-151.42,503-173,136.5-14.12,250.95,6.61,324.5,25.5V0Z" />
   </g>
 </svg>
-<app-nav />
+<app-nav (isToggled)="modeChange()"/>
 <div class="container">
   <h1>Branding Moto</h1>
   <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, similique!</h3>
@@ -11,4 +12,5 @@
     ipsa ab molestiae. Et quos, neque eaque enim labore velit impedit voluptatibus libero repellendus soluta est a
     laboriosam animi incidunt. Obcaecati id cum asperiores eius ducimus quas error labore odit commodi! At, consectetur
     dicta.</p>
+</div>
 </div>
