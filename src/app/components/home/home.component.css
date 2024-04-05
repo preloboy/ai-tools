@@ -3,6 +3,10 @@
     padding: 0 1.5em;
 }
 
+.container h1,h3,p{
+    margin-top: 1.5rem;
+}
+
 #shape{
     position: absolute;
 }
