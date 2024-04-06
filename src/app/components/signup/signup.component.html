@@ -1,7 +1,11 @@
-<div class="container login">
+<div class="container sign-up">
     <div class="form-container">
-        <p class="title">Login</p>
+        <p class="title">Sign Up</p>
         <form class="form">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="">
+            </div>
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" placeholder="">
@@ -9,11 +13,8 @@
             <div class="input-group">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" placeholder="">
-                <div class="forgot">
-                    <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
-                </div>
             </div>
-            <button class="sign">Sign in</button>
+            <button class="submit">Submit</button>
         </form>
         <div class="social-message">
             <div class="line"></div>
@@ -43,8 +44,8 @@
                 </svg>
             </button>
         </div>
-        <p class="signup">Don't have an account?
-            <a routerLink="/sign-up" rel="noopener noreferrer" href="#" class="">Sign up</a>
+        <p class="signin">Already have an account?
+            <a routerLink="/login" rel="noopener noreferrer" href="#" class="">Sign in</a>
         </p>
     </div>
 </div>
