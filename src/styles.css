@@ -2,16 +2,16 @@
 :root,
 [theme=light] {
     --primary-color: #007bff;
-    /* Define a variable */
     --secondary-color: #6c757d;
-    /* color: aliceblue; */
+    --primary-text-color: #030a11;
+    --secondary-text-color: #112436;
 }
 
 [theme=dark] {
     --primary-color: #02172e;
-    /* Define a variable */
     --secondary-color: #6c757d;
-    color: aliceblue;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #c9e0f7;
 }
 
 * {
@@ -23,4 +23,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.container{
+    
+    /* background-color: var(--secondary-color); */
 }

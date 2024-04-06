@@ -12,10 +12,5 @@ export class HomeComponent {
 
     // constructor(private appService: AppService) { }
 
-    isDark: boolean = true;
-
-    modeChange(){
-        this.isDark = !this.isDark
-    }
 
 }
