@@ -17,6 +17,26 @@ export class AppService {
 
   constructor() { }
 
+  // email: string = '';
+  // password: string = '';
+  // name: string = '';
+
+  async login(email: string, password: string) {
+    await account.createEmailPasswordSession(email, password);
+    // this.loggedInUser = await account.get();
+  }
+
+  async register(email: string, password: string, name: string) {
+    await account.create("100", email, password, name);
+    // this.login(email, password);
+    console.log(name, email, password)
+  }
+
+  async logout() {
+    await account.deleteSession('current');
+    // this.loggedInUser = null;
+  }
+
   isLoggedIn(): boolean {
     return account.get() !== null;
   }

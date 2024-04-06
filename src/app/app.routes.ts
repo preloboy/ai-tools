@@ -5,12 +5,13 @@ import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { authGuard } from './security/auth.guard';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
     { path: 'sign-up', component: SignupComponent },
-    { path: 'dashboard', component: DashboardComponent },
+    { path: 'dashboard', component: DashboardComponent, canActivate:[authGuard] },
     { path: 'ai-tools', component: AiToolsComponent },
     // { path: 'hero/:id', component: HeroDetailComponent },
     // {

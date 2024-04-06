@@ -4,17 +4,17 @@
         <form class="form">
             <div class="input-group">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="">
+                <input type="text" name="name" id="name" placeholder="" [(ngModel)]="name">
             </div>
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" name="username" id="username" placeholder="">
+                <input type="text" name="email" id="email" placeholder="" [(ngModel)]="email">
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="">
+                <input type="password" name="password" id="password" placeholder="" [(ngModel)]="password">
             </div>
-            <button class="submit">Submit</button>
+            <button (click)="createAccount()" class="submit">Submit</button>
         </form>
         <div class="social-message">
             <div class="line"></div>
