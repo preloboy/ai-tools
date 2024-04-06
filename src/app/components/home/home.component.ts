@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavComponent } from "../nav/nav.component";
-import { AppService } from '../../services/app-service/app.service';
 
 @Component({
     selector: 'app-home',

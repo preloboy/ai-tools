@@ -4,7 +4,7 @@
     --primary-color: #007bff;
     /* Define a variable */
     --secondary-color: #6c757d;
-    color: aliceblue;
+    /* color: aliceblue; */
 }
 
 [theme=dark] {
