@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppService } from '../../services/app-service/app.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
@@ -13,7 +14,6 @@ export class SignupComponent {
 
   constructor(private appService: AppService) { }
 
-  // loggedInUser: any = null;
   email: string = '';
   password: string = '';
   name: string = '';

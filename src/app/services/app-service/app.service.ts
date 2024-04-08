@@ -15,19 +15,22 @@ const account = new Account(client)
 
 export class AppService {
 
-  constructor() { }
+  loggedInUser: any = null;
 
-  // email: string = '';
-  // password: string = '';
-  // name: string = '';
+  constructor() { }
 
   async login(email: string, password: string) {
     await account.createEmailPasswordSession(email, password);
-    // this.loggedInUser = await account.get();
+    this.loggedInUser =  await account.get()
+    return this.loggedInUser
+  }
+  
+  async session(){
+    await account.get();
   }
 
   async register(email: string, password: string, name: string) {
-    await account.create("100", email, password, name);
+    await account.create(ID.unique(), email, password, name);
     // this.login(email, password);
     console.log(name, email, password)
   }
@@ -35,26 +38,6 @@ export class AppService {
   async logout() {
     await account.deleteSession('current');
     // this.loggedInUser = null;
-  }
-
-  isLoggedIn(): boolean {
-    return account.get() !== null;
-  }
-
-  createAccount(email: string, password: string, name: string | undefined) {
-    return account.create(ID.unique(), email, password, name)
-  }
-
-  getSession() {
-    return account.getSession('current')
-  }
-
-  createEmailSession(email: string, password: string) {
-    return account.createEmailPasswordSession(email, password)
-  }
-
-  deleteSession(sessionId: string) {
-    return account.deleteSession(sessionId)
   }
 
 }

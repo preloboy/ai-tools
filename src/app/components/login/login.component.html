@@ -1,14 +1,14 @@
 <div class="container login">
     <div class="form-container">
         <p class="title">Login</p>
-        <form class="form">
+        <form class="form" #loginForm="ngForm" (ngSubmit)="login(email, password)">
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" name="username" id="username" placeholder="">
+                <input type="text" name="email" id="email" placeholder="" [(ngModel)]="email" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="">
+                <input type="password" name="password" id="password" placeholder="" [(ngModel)]="password" required>
                 <div class="forgot">
                     <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
                 </div>
@@ -44,7 +44,7 @@
             </button>
         </div>
         <p class="signup">Don't have an account?
-            <a routerLink="/sign-up" rel="noopener noreferrer" href="#" class="">Sign up</a>
+            <a routerLink="/create" rel="noopener noreferrer" href="#" class="">Sign up</a>
         </p>
     </div>
 </div>
