@@ -27,12 +27,13 @@ export class AppService {
   
   async session(){
     await account.get();
+    this.loggedInUser =  await account.get()
   }
 
   async register(email: string, password: string, name: string) {
     await account.create(ID.unique(), email, password, name);
     // this.login(email, password);
-    console.log(name, email, password)
+    console.log("Account Created", name, email, password)
   }
 
   async logout() {
