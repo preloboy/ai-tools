@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AiToolComponent } from './ai-tool.component';
+import { ToolComponent } from './tool.component';
 
-describe('AiToolComponent', () => {
-  let component: AiToolComponent;
-  let fixture: ComponentFixture<AiToolComponent>;
+describe('ToolComponent', () => {
+  let component: ToolComponent;
+  let fixture: ComponentFixture<ToolComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AiToolComponent]
+      imports: [ToolComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AiToolComponent);
+    fixture = TestBed.createComponent(ToolComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

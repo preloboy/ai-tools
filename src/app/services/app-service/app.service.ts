@@ -9,6 +9,7 @@ client
 
 const account = new Account(client)
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,17 +18,17 @@ export class AppService {
 
   loggedInUser: any = null;
 
-  constructor() { }
+  // Authentication System
 
   async login(email: string, password: string) {
     await account.createEmailPasswordSession(email, password);
-    this.loggedInUser =  await account.get()
+    this.loggedInUser = await account.get()
     return this.loggedInUser
   }
-  
-  async session(){
+
+  async session() {
     await account.get();
-    this.loggedInUser =  await account.get()
+    this.loggedInUser = await account.get()
   }
 
   async register(email: string, password: string, name: string) {

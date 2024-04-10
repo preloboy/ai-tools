@@ -1,7 +1,23 @@
-<div class="container" [attr.theme]="isDark ? 'dark' : 'light'">
+<!-- <div class="container" [attr.theme]="isDark ? 'dark' : 'light'">
     <label class="switch">
         <span>Theme</span>
         <input type="checkbox" (click)="modeChange()" class="checkbox">
         <div class="slider"></div>
     </label>
+</div> -->
+<div class="navbar">
+    <a routerLink="/dashboard">Brand</a>
+    <div class="dropdown">
+        <button class="dropbtn">User Controls
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a>Profile</a>
+            <a>Settings</a>
+            <a (click)="logout()">Logout</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <app-ai-tools></app-ai-tools>
 </div>

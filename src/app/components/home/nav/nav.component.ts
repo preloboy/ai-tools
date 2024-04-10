@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AppService } from '../../services/app-service/app.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
